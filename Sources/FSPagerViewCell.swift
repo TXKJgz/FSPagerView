@@ -115,6 +115,9 @@ open class FSPagerViewCell: UICollectionViewCell {
     
     override open func layoutSubviews() {
         super.layoutSubviews()
+        
+        self.contentView.layer.shadowPath = UIBezierPath(rect: self.contentView.bounds).cgPath
+
         if let imageView = _imageView {
             imageView.frame = self.contentView.bounds
         }
